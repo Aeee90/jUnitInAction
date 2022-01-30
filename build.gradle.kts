@@ -21,14 +21,16 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.junit.platform:junit-platform-suite-engine:1.8.2")
-	testImplementation("org.junit.platform:junit-platform-runner:1.8.2")
+
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+	implementation("org.junit.platform:junit-platform-commons:1.8.2")
 }
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "11"
+		jvmTarget = "13"
 	}
 }
 
